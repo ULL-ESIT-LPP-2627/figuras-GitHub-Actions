@@ -13,6 +13,6 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-      - run: gem install rake rspec  
+      - run: gem install rake rspec simplecov 
       - run: cd TL; rake 
       - run: cd TDD; rake 
