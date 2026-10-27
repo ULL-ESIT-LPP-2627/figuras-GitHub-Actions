@@ -1,0 +1,28 @@
+name: CI BTDD
+
+on:
+  push:
+    branches: [btdd]
+  pull_request:
+    branches: [btdd]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+
+      - name: Instalar dependencias
+        run: gem install rake rspec 
+
+      - name: Ejecutar pruebas de TDD
+        run: rake
+        working-directory: TDD
