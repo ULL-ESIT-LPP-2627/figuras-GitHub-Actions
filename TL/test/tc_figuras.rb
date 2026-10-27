@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'lib/figuras'
 require 'test/unit'
 
