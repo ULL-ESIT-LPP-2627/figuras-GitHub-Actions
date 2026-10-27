@@ -21,7 +21,7 @@ jobs:
           ruby-version: "3.4"
 
       - name: Instalar dependencias
-        run: gem install rake test-unit
+        run: gem install rake test-unit simplecov
 
       - name: Ejecutar pruebas de TL
         run: rake
